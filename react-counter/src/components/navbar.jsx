@@ -33,7 +33,7 @@ const NavBar = ({ totalCounters }) => {
           <NavLink className="nav-item nav-link" to="/register">
             Register
           </NavLink>
-          <Form>
+          {/* <Form>
             <button
               onClick={this.handleSignOut}
               type="button"
@@ -44,7 +44,7 @@ const NavBar = ({ totalCounters }) => {
             >
               Sign Out
             </button>
-          </Form>
+          </Form> */}
         </div>
       </div>
     </nav>

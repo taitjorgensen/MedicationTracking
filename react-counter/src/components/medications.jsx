@@ -86,7 +86,7 @@ class Medications extends Form {
           </span>
           <table className="container">
             <Counters
-              counters={this.state.counters}
+              counters={this.state.data.counters}
               onReset={this.handleReset}
               onIncrement={this.handleIncrement}
               onDecrement={this.handleDecrement}

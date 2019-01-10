@@ -7,12 +7,15 @@ import Form from "./common/form";
 class Counters extends Form {
   state = {
     data: {
-      counters: [{}],
-      timeOptions: [{}]
+      counters: [],
+      timeOptions: []
     },
     route: "counters",
     errors: {}
   };
+  constructor(props) {
+    super(props);
+  }
   schema = {
     counters: Joi.string()
       .required()

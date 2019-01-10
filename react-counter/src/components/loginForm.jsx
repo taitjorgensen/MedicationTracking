@@ -41,8 +41,8 @@ class LoginForm extends Form {
       .catch(function(error) {
         var errorCode = error.code;
         var errorMessage = error.message;
-        if (errorMessage) errorCode[input.name] = errorMessage;
-        else delete errorCode[input.name];
+        if (errorMessage) errorCode = errorMessage;
+        //else delete errorCode;
         var user = firebase.auth();
         this.doSubmit(user);
       });

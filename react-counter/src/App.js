@@ -16,7 +16,14 @@ import "./App.css";
 
 class App extends Component {
   componentWillMount() {
-    var config = {};
+    var config = {
+      apiKey: "AIzaSyBf2y0yPgb4NuvS_hSC1xFfRhwGgOlDmJo",
+      authDomain: "myrx-app.firebaseapp.com",
+      databaseURL: "https://myrx-app.firebaseio.com",
+      projectId: "myrx-app",
+      storageBucket: "myrx-app.appspot.com",
+      messagingSenderId: "521882278554"
+    };
     firebase.initializeApp(config);
   }
 

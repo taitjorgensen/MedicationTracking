@@ -42,14 +42,16 @@ class Form extends Component {
     //call server
   };
 
-  handleChange = ({ currentTarget: input }) => {
+  handleChange = event => {
     const errors = { ...this.state.errors };
-    const errorMessage = this.validateProperty(input);
-    if (errorMessage) errors[input.name] = errorMessage;
-    else delete errors[input.name];
+    const input = event.target.value;
+    console.log("Input  " + input);
+    // const errorMessage = this.validateProperty(input);
+    // if (errorMessage) errors[input.name] = errorMessage;
+    // else delete errors[input.name];
 
-    const data = { ...this.state.data };
-    data[input.name] = input.value;
+    let data = { ...this.state.data };
+    data = input.value;
     this.setState({ data });
   };
 
@@ -80,7 +82,7 @@ class Form extends Component {
     return (
       <Select
         name={name}
-        value={data[name]}
+        value={data}
         label={label}
         options={options}
         onChange={this.handleChange}

@@ -49,7 +49,12 @@ class RegisterForm extends Form {
         <div className="col col-6">
           <h1>Register</h1>
           <form onSubmit={this.handleSubmit}>
-            <div onSubmit={this.handleRegister(username, password)}>
+            <div
+              onSubmit={this.handleRegister(
+                this.state.data.username,
+                this.state.data.password
+              )}
+            >
               {this.renderInput("username", "Username")}
               <p>*This must be a valid email address.</p>
               {this.renderInput("password", "Password", "password")}
